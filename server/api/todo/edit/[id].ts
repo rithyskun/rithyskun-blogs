@@ -1,14 +1,23 @@
 import clientPromise from "~/lib/mongodb";
+import { ObjectId } from "mongodb";
 
 export default defineEventHandler(async (event) => {
   const client = await clientPromise;
   const db = client.db("todos");
-  const query = getQuery(event);
+
   const body = await readBody(event);
+  const id = event.context.params.id;
 
   if (event.node.req.method === "PUT") {
     try {
-      const result = await db.collection("todos").updateOne(query, body);
+      const result = await db.collection("todos").updateOne(
+        {
+          _id: new ObjectId(id),
+        },
+        {
+          $set: body,
+        }
+      );
       return result;
     } catch (error: any) {
       console.error(error);
@@ -18,9 +27,8 @@ export default defineEventHandler(async (event) => {
 
   if (event.node.req.method === "DELETE") {
     try {
-      let id = event.context.params;
       await db.collection("todos").deleteOne({
-        _id: id,
+        _id: new ObjectId(id),
       });
       return "success";
     } catch (error: any) {

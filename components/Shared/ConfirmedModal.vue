@@ -22,7 +22,7 @@ onClickOutside(refTarget, () => {
 });
 
 const handleConfirmed = async (id: Todo["_id"]) => {
-  await useFetch(`/api/todo/${id}`, {
+  await useFetch(`/api/todo/edit/${id}`, {
     method: "DELETE",
   });
   store.getTodos();

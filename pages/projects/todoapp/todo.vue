@@ -54,7 +54,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex h-full w-full flex-col items-center">
+  <div class="flex h-full w-full flex-col items-center justify-center">
+    
     <form @submit.prevent="submit">
       <div class="mb-6 flex">
         <button
@@ -81,5 +82,12 @@ onMounted(() => {
       No data, Create one instead!
     </div>
     <SharedLists :todoData="filterTodo" v-else />
+
+    <p class="text-xs items-center justify-end hover:text-blue-500">
+      <NuxtLink to="https://github.com/rithyskun/TODO-APP-with-NextJS">
+        with <strong> NextJS</strong>
+        <Icon name="github" />
+      </NuxtLink>
+    </p>
   </div>
 </template>

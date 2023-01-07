@@ -40,9 +40,9 @@ const markCompleted = async (list: Todo) => {
             type="checkbox"
             v-model="list.isCompleted"
             @change="markCompleted(list)"
-            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
+            class="h-6 w-6 hover:cursor-pointer rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
           />
-          <span class="ml-5 flex items-center text-center">{{
+          <span class="ml-5 flex items-center text-center" :class="list.isCompleted ? 'flex line-through opacity-40 items-center justify-start px-2 py-2': ''">{{
             list.todo
           }}</span>
         </div>
