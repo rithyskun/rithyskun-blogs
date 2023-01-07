@@ -71,20 +71,13 @@ const saleItems = [
   },
 ];
 
-// const grandTotal = computed(() => {
-//   return saleItems.reduce(function (sum, item) {
-//     let total = sum + item.price
-//     return total
-//   }, 0)
-// })
-
 const salePrice = ref<number>(13.5);
 const quantify = ref<number>(1);
 </script>
 
 <template>
-  <div class="mt-5 p-5 rounded-xl bg-gray-200 dark:bg-gray-800">
-    <div class="grid mb-6 w-full md:grid-cols-1">
+  <div class="p-2 mt-2 rounded-xl bg-gray-400 dark:bg-gray-800">
+    <div class="grid mb-6 p-1 w-full md:grid-cols-1">
       <div class="flex-1 flex gap-5 w-full">
         <div class="w-full justify-between">
           <SharedSelect :items="products" label="Product" />
@@ -97,10 +90,10 @@ const quantify = ref<number>(1);
         </div>
       </div>
     </div>
-    <div class="grid mb-6 w-full md:grid-cols-1 justify-start items-end">
+    <div class="grid mb-6 p-1 w-full md:grid-cols-1 justify-start items-end">
       <div class="flex-1 items-end justify-end flex gap-5 w-full">
         <div class="w-full">
-          <SharedSelect :items="address" label="Category ship to" />
+          <SharedSelect :items="address" label="Country ship to" />
         </div>
         <div class="w-full">
           <SharedBaseInput
@@ -122,7 +115,7 @@ const quantify = ref<number>(1);
       </div>
     </div>
     <div
-      class="flex-1 bg-[#40f2dd] border border-white px-3 py-3 text-md font-bold rounded-full text-sm items-center justify-center flex gap-5 w-full"
+      class="flex-1 mb-5 bg-[#40f2dd] border border-white px-3 py-2.5 text-md font-bold rounded-full text-sm items-center justify-center flex text-start"
     >
       <div class="w-full">
         <div>Product Name</div>
@@ -141,9 +134,9 @@ const quantify = ref<number>(1);
       </div>
     </div>
     <div
-      class="grid-cols-2 mt-5 w-full h-full justify-between items-center md:grid-cols-1"
+      class="grid-cols-2 p-2 w-full h-full justify-between items-center md:grid-cols-1"
     >
-      <ul class="bg-gray-600 p-2 rounded-xl">
+      <ul class="bg-gray-600 rounded-xl p-2">
         <li v-for="item in saleItems" :key="item.id">
           <div
             class="flex-1 py-2 text-sm font-bold truncate items-center justify-center flex gap-5 w-full"
@@ -170,7 +163,7 @@ const quantify = ref<number>(1);
       </ul>
       <div class="flex grid-cols-1 p-2 mt-2 items-center justify-between">
         <div class="font-bold text-xl text-white">Total: £ 76.00</div>
-        <div class="space-x-2">
+        <div class="space-x-2 flex">
           <SharedButton label="Cancel" class="bg-white hover:text-white dark:bg-white text-gray-800"/>
           <SharedButton label="Save" class="bg-gray-600"/>
         </div>

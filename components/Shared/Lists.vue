@@ -52,7 +52,8 @@ const markCompleted = async (list: Todo) => {
           class="text-end hover:cursor-pointer hover:text-red-500"
         />
       </li>
+      <SharedConfirmedModal :show="showModal" :_id="confirmedId" @closeModal="close" />
+
     </ul>
-    <SharedConfirmedModal :show="showModal" :_id="confirmedId" @closeModal="close" />
   </div>
 </template>

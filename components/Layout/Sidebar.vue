@@ -12,16 +12,16 @@ const { t } = useI18n();
     class="fixed top-14 -left-[220px] z-10 h-screen w-[220px] overflow-y-auto whitespace-normal bg-gray-200 transition-all duration-300 dark:bg-gray-800"
     :class="{ '!left-0': store.sidebar }"
   >
-    <div class="w-full px-3 text-sm">
+    <div class="w-full px-3 text-xs">
 
       <!-- todo app demo  -->
       <NuxtLink class="nav-link">
-        <div class="flex items-center p-2">
+        <div class="flex items-center mt-2">
           <Icon name="folder" />
           <span class="ml-3">Demo</span>
         </div>
       </NuxtLink>
-      <ul class="space-y-1 p-2 hover:bg-gray-200">
+      <ul class="space-y-1 p-2 hover:bg-gray-200 dark:hover:bg-gray-800">
         <NuxtLink
           v-for="nav in todoApp"
           :to="nav.to"
@@ -29,13 +29,13 @@ const { t } = useI18n();
           class="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
         >
           <Icon :name="nav.icon" size="16"/>
-          <span class="ml-3 text-sm">{{ t(nav.locale) }}</span>
+          <span class="ml-3 text-xs">{{ t(nav.locale) }}</span>
         </NuxtLink>
       </ul>
 
       <!-- sample dashboard  -->
       <NuxtLink class="nav-link">
-        <div class="flex items-center p-2">
+        <div class="flex items-center">
           <Icon name="folder" />
           <span class="ml-3">Sample</span>
         </div>
@@ -48,13 +48,13 @@ const { t } = useI18n();
           class="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
         >
           <Icon :name="nav.icon" size="16"/>
-          <span class="ml-3 text-sm">{{ t(nav.locale) }}</span>
+          <span class="ml-3 text-xs">{{ t(nav.locale) }}</span>
         </NuxtLink>
       </ul>
 
       <!-- shopping cart  -->
       <NuxtLink class="nav-link">
-        <div class="flex items-center p-2">
+        <div class="flex items-center">
           <Icon name="folder"/>
           <span class="ml-3">POS</span>
         </div>
@@ -67,7 +67,7 @@ const { t } = useI18n();
           class="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
         >
           <Icon :name="nav.icon" size="16" />
-          <span class="ml-3 text-sm">{{ t(nav.locale) }}</span>
+          <span class="ml-3 text-xs">{{ t(nav.locale) }}</span>
         </NuxtLink>
       </ul>
 

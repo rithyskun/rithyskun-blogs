@@ -26,7 +26,7 @@ onClickOutside(target, () => {
     v-show="show"
     ref="target"
     id="drawer-navigation"
-    class="fixed top-14 left-0 z-20 h-screen w-80 overflow-y-auto bg-gray-200 bg-white p-4 dark:bg-gray-800"
+    class="fixed top-14 left-0 z-20 h-screen w-60 md:w-72 overflow-y-auto bg-gray-200 bg-white p-4 dark:bg-gray-800"
     tabindex="-1"
     aria-labelledby="drawer-navigation-label"
   >

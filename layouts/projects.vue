@@ -5,14 +5,14 @@ const store = useSidebarStore();
 </script>
 
 <template>
-  <div class="dark:bg-gray-900 dark:text-white w-full">
+  <div class="dark:bg-gray-900 dark:text-white w-full h-screen">
     <LayoutSidebar />
 
-    <div class="mt-10">
-      <div class="p-4 h-full" :class="{ '!ml-[220px]': store.sidebar }">
+    <div class="mt-12">
+      <div class="p-5" :class="{ '!ml-[220px]': store.sidebar }">
         <Icon
           name="sidebar"
-          class="hover:cursor-pointer"
+          class="hover:cursor-pointer text-gray-300 hover:text-gray-800 dark:text-gray-200 dark:hover:text-white"
           :class="
             store.sidebar
               ? ' hover:text-blue-500'

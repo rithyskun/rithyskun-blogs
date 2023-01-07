@@ -25,7 +25,6 @@ const handleConfirmed = async (id: Todo["_id"]) => {
   await useFetch(`/api/todo/${id}`, {
     method: "DELETE",
   });
-  //   store.deteleTodo(id)
   store.getTodos();
   emit("closeModal");
 };
@@ -36,13 +35,13 @@ const handleConfirmed = async (id: Todo["_id"]) => {
     v-show="show"
     ref="refTarget"
     id="popup-modal"
-    className="fixed inset-0 z-40 flex items-center justify-center bg-gray-300"
+    className="fixed inset-0 z-10 flex items-center justify-center bg-gray-300"
   >
     <div className="relative bg-white rounded-lg dark:bg-gray-700">
       <button
         @click="$emit('closeModal')"
         type="button"
-        className="absolute top-3 right-2.5 bg-gray-100 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 text-sm py-1.5 px-2.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+        className="absolute top-3 right-2.5 bg-gray-100 rounded-full text-gray-400 hover:bg-gray-200 hover:text-gray-900 text-sm py-0.5 px-2 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
         data-modal-toggle="popup-modal"
       >
         X<span className="sr-only">Close modal</span>
