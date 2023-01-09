@@ -14,6 +14,7 @@
     "nuxt": "3.0.0"
   },
   "dependencies": {
+    "@giscus/vue": "^2.2.6",
     "@nuxtjs/tailwindcss": "^6.2.0",
     "@pinia/nuxt": "^0.4.6",
     "@vueuse/nuxt": "^9.10.0",

@@ -55,7 +55,6 @@ onMounted(() => {
 
 <template>
   <div class="flex h-full w-full flex-col items-center justify-center">
-    
     <form @submit.prevent="submit">
       <div class="mb-6 flex">
         <button
@@ -89,5 +88,6 @@ onMounted(() => {
         <Icon name="github" />
       </NuxtLink>
     </p>
+    
   </div>
 </template>
