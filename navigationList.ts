@@ -6,9 +6,9 @@ export const mainNav = [
     icon: "folder",
     locale: "projects",
   },
-  { name: "Article", to: "/article/first-article", icon: "cafe", locale: "article" },
+  { name: "Articles", to: "/articles/first-article", icon: "cafe", locale: "article" },
   { name: "Blogs", to: "/blogs/geting-start", icon: "cafe", locale: "blog" },
-  { name: "Profile", to:"/profile", icon: "cafe", locale:"profile"},
+  { name: "Profile", to:"/profile/current", icon: "cafe", locale:"profile"},
 ];
 
 export const minNav = [

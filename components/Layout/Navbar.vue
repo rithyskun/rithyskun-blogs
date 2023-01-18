@@ -11,12 +11,12 @@ const close = () => {
 
 <template>
   <nav
-    class="bg-gray-100 border-gray-200  px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900"
+    class="bg-white border-gray-200 sm:px-4 py-2.5 rounded dark:bg-gray-900"
   >
     <div class="container flex flex-wrap items-center justify-center mx-auto">
-      <a href="/profile" class="items-center hidden md:flex">
+      <a href="/profile/current" class="items-center hidden md:flex">
         <span
-          class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+          class="self-center text-xl mr-5 font-semibold whitespace-nowrap dark:text-white"
           >@Rithy
           <strong class="font-mono italic text-cyan-500">SKUN</strong></span
         >
@@ -35,11 +35,11 @@ const close = () => {
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-sticky">
         <ul
-          class="flex flex-col p-2 items-center justify-center text-center border border-gray-100 rounded-lg bg-gray-100 md:flex-row md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-gray-100 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          class="flex flex-col items-center justify-center text-center md:flex-row md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-black md:dark:bg-gray-900 dark:border-gray-700"
         >
           <NuxtLink
-            class="block hover:bg-blue-500 rounded py-2.5 px-3 py-2.5 px-5 rounded-full"
-            active-class="dark:bg-gray-200 dark:text-gray-900 py-2.5 px-3 rounded-full"
+            class="block hover:bg-gray-200 rounded-full py-2.5 px-3 py-2.5 px-5 rounded-full"
+            active-class="dark:bg-gray-200 text-white bg-cyan-500 dark:text-gray-900 py-2.5 px-3 rounded-full"
             v-for="nav in mainNav"
             :key="nav.name"
             :to="nav.to"

@@ -3,7 +3,7 @@ import Giscus from "@giscus/vue";
 </script>
 
 <template>
-  <Suspense>
+    <Suspense>
     <Giscus
       id="comments"
       repo="rithyskun/rithyskun-blogs"

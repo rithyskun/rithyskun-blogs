@@ -9,11 +9,12 @@ const parentPath = computed(() => {
 </script>
 
 <template>
-  <LayoutNavbar />
-  <!-- <MainSidebar /> -->
-  <article>
-    <div class="px-10 w-full container">
-      <slot />
-    </div>
-  </article>
+  <div>
+    <LayoutNavbar />
+    <article>
+      <div class="px-7 py-10 mx-auto max-w-[85vh]">
+        <slot />
+      </div>
+    </article>
+  </div>
 </template>
