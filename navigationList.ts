@@ -6,7 +6,9 @@ export const mainNav = [
     icon: "folder",
     locale: "projects",
   },
-  { name: "About Me", to: "/about", icon: "cafe", locale: "about" },
+  { name: "Article", to: "/article/first-article", icon: "cafe", locale: "article" },
+  { name: "Blogs", to: "/blogs/geting-start", icon: "cafe", locale: "blog" },
+  { name: "Profile", to:"/profile", icon: "cafe", locale:"profile"},
 ];
 
 export const minNav = [
@@ -17,7 +19,6 @@ export const minNav = [
     icon: "folder",
     locale: "projects",
   },
-  { name: "About Me", to: "/about", icon: "cafe", locale: "about" },
 ];
 
 export const todoApp = [

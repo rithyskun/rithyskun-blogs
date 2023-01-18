@@ -4,7 +4,7 @@ import { Todo } from "~/types/todo.type";
 import { useTodoStore } from "~/stores/todo";
 import { useFocus } from "@vueuse/core";
 
-const target = ref();
+const router = useRoute()
 const store = useTodoStore();
 const props = defineProps({
   todoData: Array as PropType<Todo[]>,
@@ -17,13 +17,24 @@ const handleDelete = (list: Todo["_id"]) => {
   confirmedId.value = list;
 };
 
+const input = ref<boolean>(false)
+// const { focused: inputFocus } = useFocus(input)
+
 const isEdit = ref<boolean>(false);
 const editedTodo = ref<Todo>();
-const editTodo = (list: Todo) => {
+const editTodo = async (list: Todo) => {
   isEdit.value = true;
   editedTodo.value = list;
-  useFocus(target)
+  console.log(input.value)
 };
+
+// watch(isEdit, async (newValue: boolean) => {
+//   if(newValue==true) {
+//     nextTick(() => {
+//     input.value.focus()
+//   })
+//   }
+// })
 
 const doneEdit = async () => {
   isEdit.value = false;
@@ -70,12 +81,14 @@ const markCompleted = async (list: Todo) => {
             >{{ list.todo }}</label
           >
           <input
-            ref="target"
+            ref="input"
             v-if="isEdit"
             type="text"
-            name="edit"
+            :name="list.todo"
+            :id="list.todo"
             :value="list.todo"
             :disabled="list.isCompleted"
+            tabindex="0"
             @blur="cancelEdit"
             @change="doneEdit"
             @keyup.enter="doneEdit"

@@ -1,9 +1,9 @@
 <template>
-  <div class="mt-10 p-5">
+  <NuxtLayout name="default">
     Home Page
-
-    
-  </div>
+    <NuxtLink to="/blogs/how-javascript-work">Go to First Article</NuxtLink>
+    <SharedGithubDiscussion />
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts"></script>

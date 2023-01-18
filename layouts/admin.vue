@@ -5,7 +5,7 @@ const store = useSidebarStore();
 </script>
 
 <template>
-  <div class="dark:bg-gray-900 dark:text-white w-full h-screen">
+  <div class="dark:bg-gray-900 dark:text-white w-full h-full">
     <LayoutSidebar />
 
     <div class="mt-12">

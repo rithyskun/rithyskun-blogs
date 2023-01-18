@@ -1,8 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="dark:bg-gray-900 dark:text-white w-full h-screen">
-    <LayoutNavbar />
-    <slot />
-  </div>
+  <LayoutNavbar />
+  <main class="px-7 py-10 mx-auto max-w-[85vh]">
+      <slot />
+  </main>
 </template>

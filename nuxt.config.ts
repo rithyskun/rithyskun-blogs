@@ -10,7 +10,13 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxtjs/i18n",
     "nuxt-icon",
+    "@nuxtjs/color-mode",
   ],
+  extends: "@nuxt-themes/docus",
+  colorMode: {
+    classSuffix: "",
+  },
+  
   i18n: {
     vueI18n: {
       legacy: false,

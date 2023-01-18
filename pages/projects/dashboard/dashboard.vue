@@ -95,7 +95,7 @@ const saleItems = [
 </script>
 
 <template>
-  <div class="bg-gray-700 mt-2 p-5 rounded-xl">
+  <div class="bg-gray-700 mt-2 p-5 rounded-xl container mx-auto">
     <div class="grid grid-cols-2 gap-5">
       <div class="h-32 w-full rounded-xl">
         <div class="flex h-64 bg-gray-500 text-gray-900 w-full rounded-xl">
@@ -151,9 +151,9 @@ const saleItems = [
             >
           </div>
           <div
-            class="flex w-4/6 truncate text-gray-900 flex flex-col p-2 h-72 rounded-xl bg-gray-500"
+            class="flex w-4/6 truncate text-gray-900 items-center flex flex-col py-2 h-72 rounded-xl bg-gray-500"
           >
-            <span class="items-center flex justify-center mb-2"
+            <span class="items-center flex justify-between"
               >Monthly sales</span
             >
             <div class="flex flex-row justify-between text-xs text-white">
@@ -289,7 +289,7 @@ const saleItems = [
       <div class="grid w-2/6 mt-5 space-y-5">
         <div class="w-1/2">
           <div
-            class="bg-gray-400 text-gray-900 rounded-xl text-center flex flex-col items-center justify-center w-full h-full"
+            class="bg-gray-400 text-gray-900 rounded-xl flex flex-col items-center justify-center w-full h-full"
           >
             Most shipped
             <span class="items-center text-xl py-2 font-bold text-[#40f2dd]"
@@ -298,7 +298,7 @@ const saleItems = [
           </div>
         </div>
         <div
-          class="bg-gray-300 p-2 text-gray-900 text-xl text-center rounded-xl flex flex-col items-center justify-center"
+          class="bg-gray-300 p-2 text-gray-900 text-xl rounded-xl flex flex-col items-center justify-center"
         >
           Total sales
           <span class="items-center text-2xl py-2 font-bold text-[#40f2dd]"

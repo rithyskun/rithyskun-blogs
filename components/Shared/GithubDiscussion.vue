@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import Giscus from "@giscus/vue";
-
 </script>
 
 <template>
-  <div>
+  <Suspense>
     <Giscus
       id="comments"
       repo="rithyskun/rithyskun-blogs"
@@ -21,5 +20,5 @@ import Giscus from "@giscus/vue";
       loading="lazy"
       crossorigin="anonymous"
     />
-  </div>
+  </Suspense>
 </template>

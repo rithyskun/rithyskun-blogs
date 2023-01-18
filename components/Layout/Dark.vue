@@ -1,16 +1,18 @@
 <script setup lang="ts">
-import { useDark, useToggle } from "@vueuse/core";
+const colorMode = useColorMode();
+const onClick = () => {
+  const values = ["system", "light", "dark"];
+  const index = values.indexOf(colorMode.preference);
+  const next = (index + 1) % values.length;
 
-const isDark = useDark();
-const toggleDark = useToggle(isDark);
-
+  colorMode.preference = values[next];
+};
 </script>
 
 <template>
-  <button
-    @click="toggleDark()"
-    class="text-sm dark:bg-gray-900 focus:ring-1 focus:ring-gray-200 px-2.5 dark:text-yellow-300"
-  >
-    <Icon :name="isDark ? 'light' : 'dark'" />
+  <button aria-label="Color Mode" @click="onClick" class="hover:text-cyan-500">
+    <Icon v-if="colorMode.preference === 'dark'" name="carbon:moon" />
+    <Icon v-else-if="colorMode.preference === 'light'" name="carbon:light" />
+    <Icon v-else name="carbon:screen" />
   </button>
 </template>

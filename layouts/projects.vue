@@ -5,11 +5,12 @@ const store = useSidebarStore();
 </script>
 
 <template>
-  <div class="dark:bg-gray-900 dark:text-white w-full h-screen">
+  <main>
+    <LayoutNavbar />
     <LayoutSidebar />
 
-    <div class="mt-12">
-      <div class="p-5" :class="{ '!ml-[220px]': store.sidebar }">
+    <div class="mx-5">
+      <div  :class="{ '!ml-[220px]': store.sidebar }">
         <Icon
           name="sidebar"
           class="hover:cursor-pointer text-gray-300 hover:text-gray-800 dark:text-gray-200 dark:hover:text-white"
@@ -23,5 +24,5 @@ const store = useSidebarStore();
         <NuxtPage />
       </div>
     </div>
-  </div>
+  </main>
 </template>

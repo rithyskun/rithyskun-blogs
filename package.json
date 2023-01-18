@@ -9,12 +9,15 @@
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.8",
+    "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/i18n": "^8.0.0-beta.7",
     "@tailwindcss/forms": "^0.5.3",
     "nuxt": "3.0.0"
   },
   "dependencies": {
     "@giscus/vue": "^2.2.6",
+    "@nuxt-themes/docus": "^1.4.6",
+    "@nuxt/content": "^2.3.0",
     "@nuxtjs/tailwindcss": "^6.2.0",
     "@pinia/nuxt": "^0.4.6",
     "@vueuse/nuxt": "^9.10.0",

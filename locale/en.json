@@ -9,5 +9,8 @@
   "add_sale": "Add Sale",
   "projects": "Projects",
   "sale": "Sales",
-  "payment": "Payment"
+  "payment": "Payment",
+  "blog": "Blogs",
+  "article": "Article",
+  "profile": "Profile"
 }
