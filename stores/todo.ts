@@ -13,8 +13,8 @@ export const useTodoStore = defineStore("todos", {
 
   actions: {
     async getTodos() {
-      const data = await $fetch("/api/todo/todo");
-      return (this.todos = data as any);
+      const data: Todo[] = await $fetch("/api/todo/todo");
+      return this.todos = data
     },
     async createdTodo(todo: Todo) {
       await useFetch("/api/todo/todo", {

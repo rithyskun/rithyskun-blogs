@@ -10,12 +10,23 @@ export default defineAppConfig({
     layout: {
       fluid: true,
     },
+    header: {
+      title: 'Rithy SKUN',
+      logo: false,
+      showLinkIcon: true,
+      exclude: []
+    },
     aside: {
       level: 1,
       collapsed: false,
       exclude: [],
     },
     footer: {
+      credits: {
+        icon: 'IconDocus',
+        text: 'Powered by Docus',
+        href: 'https://docus.dev',
+      },
       iconLinks: [
         {
           href: "https://rithyskun-blogs.netlify.app/",
@@ -47,6 +58,7 @@ export default defineAppConfig({
       sidebar: "carbon:side-panel-close",
       folder: "carbon:folder",
       screen: "carbon:screen",
+      bookmark: "carbon:bookmark"
     },
   },
 });

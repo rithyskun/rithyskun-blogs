@@ -11,8 +11,8 @@ const onClick = () => {
 
 <template>
   <button aria-label="Color Mode" @click="onClick" class="hover:text-cyan-500">
-    <Icon v-if="colorMode.preference === 'dark'" name="carbon:moon" size="16" />
-    <Icon v-else-if="colorMode.preference === 'light'" name="carbon:light" size="16"/>
-    <Icon v-else name="carbon:screen" size="16"/>
+    <Icon v-if="colorMode.preference === 'dark'" name="carbon:moon" />
+    <Icon v-else-if="colorMode.preference === 'light'" name="carbon:light"/>
+    <Icon v-else name="carbon:screen"/>
   </button>
 </template>

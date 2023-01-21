@@ -6,13 +6,13 @@ const store = useSidebarStore();
 
 <template>
   <main>
-    <LayoutNavbar />
+    <!-- <LayoutNavbar /> -->
     <LayoutSidebar />
-
     <div class="mx-5">
       <div  :class="{ '!ml-[220px]': store.sidebar }">
         <Icon
           name="sidebar"
+          size="20"
           class="hover:cursor-pointer text-gray-300 hover:text-gray-800 dark:text-gray-200 dark:hover:text-white"
           :class="
             store.sidebar
@@ -21,7 +21,7 @@ const store = useSidebarStore();
           "
           @click="store.toggleSidebar"
         />
-        <NuxtPage />
+        <slot />
       </div>
     </div>
   </main>

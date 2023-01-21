@@ -12,5 +12,6 @@
   "payment": "Payment",
   "blog": "Blogs",
   "article": "Articles",
-  "profile": "Profile"
+  "profile": "Profile",
+  "bookmark": "Bookmark"
 }

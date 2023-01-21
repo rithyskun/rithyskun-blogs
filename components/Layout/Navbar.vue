@@ -1,19 +1,17 @@
 <script setup lang="ts">
-import { mainNav } from "~~/navigationList";
+import { mainNav } from '~~/navigationList'
 
-const { t } = useI18n();
-const isMobile = ref<boolean>(false);
+const { t } = useI18n()
+const isMobile = ref<boolean>(false)
 
 const close = () => {
-  isMobile.value = false;
-};
+  isMobile.value = false
+}
 </script>
 
 <template>
-  <nav
-    class="bg-white border-gray-200 sm:px-4 py-2.5 rounded dark:bg-gray-900"
-  >
-    <div class="container flex flex-wrap items-center justify-center mx-auto">
+  <nav class="bg-white border-gray-200 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+    <div class="container flex flex-wrap items-center justify-between px-3">
       <a href="/profile/current" class="items-center hidden md:flex">
         <span
           class="self-center text-xl mr-5 font-semibold whitespace-nowrap dark:text-white"

@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <LayoutNavbar />
+  <!-- <LayoutNavbar /> -->
 
   <DocsPageLayout>
     <slot />

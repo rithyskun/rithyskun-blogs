@@ -37,6 +37,7 @@ const todos = computed(() => {
   return store.todos;
 });
 
+
 const filterTodo = computed(() => {
   if (!keyword.value) return todos.value;
   return todos.value.filter((item) => {
@@ -81,7 +82,6 @@ onMounted(() => {
       No data, Create one instead!
     </div>
     <SharedLists :todoData="filterTodo" v-else />
-
     <p class="text-xs items-center justify-end hover:text-blue-500">
       <NuxtLink to="https://github.com/rithyskun/TODO-APP-with-NextJS">
         with <strong> NextJS</strong>

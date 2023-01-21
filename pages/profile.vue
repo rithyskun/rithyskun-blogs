@@ -3,12 +3,12 @@ const { page } = useContent();
 </script>
 
 <template>
-  <div class="page-layout">
-    <LayoutNavbar />
-    <DocsPageLayout>
-      <NuxtPage></NuxtPage>
-    </DocsPageLayout>
-  </div>
+    <div class="page-layout">
+        <LayoutNavbar />
+        <DocsPageLayout>
+            <NuxtPage></NuxtPage>
+        </DocsPageLayout>
+    </div>
 </template>
 <style lang="ts" scoped>
 css({

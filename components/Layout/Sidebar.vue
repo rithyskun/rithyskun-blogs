@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { todoApp, dashboardApp, posApp } from "~~/navigationList";
-import { useSidebarStore } from "../../stores/sidebar";
+import { todoApp, dashboardApp, posApp } from '~~/navigationList'
+import { useSidebarStore } from '../../stores/sidebar'
 
-const store = useSidebarStore();
+const store = useSidebarStore()
 
-const { t } = useI18n();
+const { t } = useI18n()
 </script>
 
 <template>
@@ -13,7 +13,6 @@ const { t } = useI18n();
     :class="{ '!left-0': store.sidebar }"
   >
     <div class="w-full px-3 text-xs">
-
       <!-- todo app demo  -->
       <NuxtLink class="nav-link">
         <div class="flex items-center mt-2">
@@ -28,7 +27,7 @@ const { t } = useI18n();
           active-class="bg-blue-200 dark:bg-gray-500"
           class="flex items-center hover:bg-gray-200 rounded-lg p-2 text-base font-normal text-gray-900 dark:text-white dark:hover:bg-gray-700"
         >
-          <Icon :name="nav.icon" size="16"/>
+          <Icon :name="nav.icon" size="16" />
           <span class="ml-3 text-xs">{{ t(nav.locale) }}</span>
         </NuxtLink>
       </ul>
@@ -40,14 +39,14 @@ const { t } = useI18n();
           <span class="ml-3">Sample</span>
         </div>
       </NuxtLink>
-      <ul class="space-y-1 p-2 hover:bg-gray-200 dark:hover:bg-gray-800">
+      <ul class="space-y-1 p-2">
         <NuxtLink
           v-for="nav in dashboardApp"
           :to="nav.to"
           active-class="bg-blue-200 dark:bg-gray-500"
-          class="flex items-center hover:bg-white rounded-lg p-2 text-base font-normal text-gray-900 dark:text-white dark:hover:bg-gray-700"
+          class="flex items-center hover:bg-gray-200 rounded-lg p-2 text-base font-normal text-gray-900 dark:text-white dark:hover:bg-gray-700"
         >
-          <Icon :name="nav.icon" size="16"/>
+          <Icon :name="nav.icon" size="16" />
           <span class="ml-3 text-xs">{{ t(nav.locale) }}</span>
         </NuxtLink>
       </ul>
@@ -55,11 +54,11 @@ const { t } = useI18n();
       <!-- shopping cart  -->
       <NuxtLink class="nav-link">
         <div class="flex items-center">
-          <Icon name="folder"/>
+          <Icon name="folder" />
           <span class="ml-3">POS</span>
         </div>
       </NuxtLink>
-      <ul class="space-y-1 p-2 hover:bg-gray-200 dark:hover:bg-gray-800">
+      <ul class="space-y-1 p-2">
         <NuxtLink
           v-for="nav in posApp"
           :to="nav.to"
@@ -70,7 +69,6 @@ const { t } = useI18n();
           <span class="ml-3 text-xs">{{ t(nav.locale) }}</span>
         </NuxtLink>
       </ul>
-
     </div>
   </div>
 </template>

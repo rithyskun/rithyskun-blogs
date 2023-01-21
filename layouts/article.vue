@@ -10,7 +10,7 @@ const parentPath = computed(() => {
 
 <template>
   <div>
-    <LayoutNavbar />
+    <!-- <LayoutNavbar /> -->
     <article>
       <div class="px-7 py-10 mx-auto max-w-[85vh]">
         <slot />

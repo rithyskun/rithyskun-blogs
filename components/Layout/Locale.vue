@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { useLocaleStore } from "../../stores/locale";
+import { useLocaleStore } from '../../stores/locale'
 
 // const { locale, locales } = useI18n();
-const switchLocalePath = useSwitchLocalePath();
+const switchLocalePath = useSwitchLocalePath()
 
-const { t, availableLocales, locale } = useI18n();
-const store = useLocaleStore();
+const { t, availableLocales, locale } = useI18n()
+const store = useLocaleStore()
 
-const language = store.useLocale;
+const language = store.useLocale
 
 watch(locale, (cv) => {
-  store.changeLocale(cv);
-});
+  store.changeLocale(cv)
+})
 </script>
 
 <template>
@@ -22,5 +22,4 @@ watch(locale, (cv) => {
     <option value="en">EN</option>
     <option value="km">ខ្មែរ</option>
   </select>
-
 </template>
