@@ -11,8 +11,12 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "nuxt-icon",
     "@nuxtjs/color-mode",
+    "nuxt-plausible"
   ],
   extends: "@nuxt-themes/docus",
+  plausible: {
+    domain: 'localhost:3000'
+  },
   colorMode: {
     classSuffix: "",
   },
@@ -39,6 +43,7 @@ export default defineNuxtConfig({
     plugins: ["~/server/index.ts"]
   },
   runtimeConfig: {
-    mongodbUri: process.env.MONGODB_URI
+    mongodbUri: process.env.MONGODB_URI,
+    plausible: process.env.NUXT_PUBLIC_PLAUSIBLE_DOMAIN
   }
 });

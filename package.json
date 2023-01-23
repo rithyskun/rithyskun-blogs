@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@giscus/vue": "^2.2.6",
-    "@nuxt-themes/docus": "^1.4.6",
+    "@nuxt-themes/docus": "^1.4.7",
     "@nuxtjs/tailwindcss": "^6.2.0",
     "@pinia/nuxt": "^0.4.6",
     "@vueuse/nuxt": "^9.10.0",
@@ -24,6 +24,7 @@
     "mongodb": "^4.13.0",
     "mongoose": "^6.8.4",
     "nuxt-icon": "^0.1.8",
+    "nuxt-plausible": "^0.1.2",
     "vue-chartjs": "^5.1.0"
   }
 }

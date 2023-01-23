@@ -1503,17 +1503,17 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@nuxt-themes/docus@^1.4.6":
-  version "1.4.6"
-  resolved "https://registry.yarnpkg.com/@nuxt-themes/docus/-/docus-1.4.6.tgz#e364a7932cd643a82210f267420a3cd27e149bdf"
-  integrity sha512-OmT/gOOohWg59efd0X2WS6DZwfR3HF7VYdd8oMoQCxwN23V8kf7CANItiNoJHAYn8DUs6m0rFLIGg/mNqpgQOA==
+"@nuxt-themes/docus@^1.4.7":
+  version "1.4.7"
+  resolved "https://registry.yarnpkg.com/@nuxt-themes/docus/-/docus-1.4.7.tgz#e98ae8d6c63a6f395d2a60c6f059f8b77f605af4"
+  integrity sha512-YOUnOky2QFKSZnSASMBHQmObhdEnRny0e+BxKOx2F++qMHKXx9vNpVWfl+2mYjpYEQihSERJ7WZiOhHo0QBLTg==
   dependencies:
     "@nuxt-themes/elements" "^0.4.4"
     "@nuxt-themes/tokens" "^1.5.3"
-    "@nuxt-themes/typography" "^0.4.1"
+    "@nuxt-themes/typography" "^0.4.2"
     "@nuxt/content" "^2.3.0"
-    "@nuxthq/studio" "^0.5.5"
-    "@vueuse/nuxt" "^9.11.0"
+    "@nuxthq/studio" "^0.6.3"
+    "@vueuse/nuxt" "^9.11.1"
 
 "@nuxt-themes/elements@^0.4.4":
   version "0.4.4"
@@ -1532,10 +1532,10 @@
     "@vueuse/core" "^9.10.0"
     pinceau "^0.10.7"
 
-"@nuxt-themes/typography@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@nuxt-themes/typography/-/typography-0.4.1.tgz#013838c365fe70a1c1942a37dfc37bdef6eb1d97"
-  integrity sha512-lTdTMz3fRJcnSU78ErmE8NydYHBoYayPJvwSOMjY0jFmVrk5fbsOVZ12FW5oalYsPoOCXEcCJ+BD21O+MSCX3w==
+"@nuxt-themes/typography@^0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@nuxt-themes/typography/-/typography-0.4.2.tgz#a92e9e1e4f6cae501ecf7f86b29d1877a3df831d"
+  integrity sha512-+lX7occxSCogUXmVwrsNwvS5ylgmFECGyF22tGXzFKT8Y+TMFSKk/dk/TEYoJ7OnL7CGxkvnW4muLCjN6nLJWA==
   dependencies:
     "@nuxt-themes/tokens" "^1.5.3"
     "@nuxtjs/color-mode" "^3.2.0"
@@ -1740,10 +1740,10 @@
     vite-plugin-checker "^0.5.1"
     vue-bundle-renderer "^1.0.0"
 
-"@nuxthq/studio@^0.5.5":
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/@nuxthq/studio/-/studio-0.5.6.tgz#92ccb899af4a63eb179db90e3a321dab83710584"
-  integrity sha512-RmACiWdckQJ+RjW5tr/VtLi/bqCs1EZji9MiMI8ZeW1htFs2otXI/NmJwI+iEzIagLXMzM4q2ZuBLh6vwr7wwQ==
+"@nuxthq/studio@^0.6.3":
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/@nuxthq/studio/-/studio-0.6.3.tgz#478ba15a216fe75ab10b5477491911fd73d8ecf0"
+  integrity sha512-nwU74IzTZiuvSrzEHjjguTNNu8iZCLeby55rpcZRhdQ2Mhg2uk8XdPphdE8DDuHGJUFBDYSyQRmQfg6/KoTPFA==
   dependencies:
     "@nuxt/kit" "^3.0.0"
     "@nuxt/schema" "^3.0.0"
@@ -2532,7 +2532,17 @@
     "@vueuse/shared" "9.10.0"
     vue-demi "*"
 
-"@vueuse/core@9.11.0", "@vueuse/core@^9.10.0":
+"@vueuse/core@9.11.1":
+  version "9.11.1"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-9.11.1.tgz#1552aef67144220da7e6b797372a194a9c7ff52e"
+  integrity sha512-E/cizD1w9ILkq4axYjZrXLkKaBfzloaby2n3NMjUfd6yI/jkfTVgc6iwy/Cw2e++Ld4LphGbO+3MhzizvwUslQ==
+  dependencies:
+    "@types/web-bluetooth" "^0.0.16"
+    "@vueuse/metadata" "9.11.1"
+    "@vueuse/shared" "9.11.1"
+    vue-demi "*"
+
+"@vueuse/core@^9.10.0":
   version "9.11.0"
   resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-9.11.0.tgz#4871e795567c142353c4ec62694c02bf7583e3bc"
   integrity sha512-7yZJ8LNOssA8ZmeSjd4F+wbFBA4csiP4TiaXgruqg1H4PAtzSkv93PPwFLvQkSnfo3Bar+e+6QoRvWjhz7l2Xg==
@@ -2562,6 +2572,11 @@
   resolved "https://registry.yarnpkg.com/@vueuse/metadata/-/metadata-9.11.0.tgz#07133eb3d78cbea376b6ad216950b4bbfafd041c"
   integrity sha512-HhtG2SWkcfZBLbamHdvLn7jKOCFpw/ifXjVTd5ilFkj98WVUk/3UTQ03wF1XIkuhSO4+b45hD2lfG9/GdKCF7w==
 
+"@vueuse/metadata@9.11.1":
+  version "9.11.1"
+  resolved "https://registry.yarnpkg.com/@vueuse/metadata/-/metadata-9.11.1.tgz#f4e5fd9cb421c5a02373d034a0ce53538b370518"
+  integrity sha512-ABjkrG+VXggNhjfGyw5e/sekxTZfXTwjrYXkkWQmQ7Biyv+Gq9UD6IDNfeGvQZEINI0Qzw6nfuO2UFCd3hlrxQ==
+
 "@vueuse/nuxt@^9.10.0":
   version "9.10.0"
   resolved "https://registry.yarnpkg.com/@vueuse/nuxt/-/nuxt-9.10.0.tgz#bcd44131a6c5ad9436490a2eeb827147b4fbb59d"
@@ -2573,14 +2588,14 @@
     local-pkg "^0.4.2"
     vue-demi "*"
 
-"@vueuse/nuxt@^9.11.0":
-  version "9.11.0"
-  resolved "https://registry.yarnpkg.com/@vueuse/nuxt/-/nuxt-9.11.0.tgz#6cfcae08b65a9b751b6b978ddf27aaa50f8c7d6f"
-  integrity sha512-gG6Zv85/2ra64elUa4jQGxOKL/rYfGxpJ90XYwOCGEfFaWGyU2PswO3dj8o0IFZHyv592LalAPBuQ/qIb+mfZw==
+"@vueuse/nuxt@^9.11.1":
+  version "9.11.1"
+  resolved "https://registry.yarnpkg.com/@vueuse/nuxt/-/nuxt-9.11.1.tgz#b6d6394bf69b8b96356b9499588e4c688011e74a"
+  integrity sha512-hiiRzLgsH5nTAb2TChyFc6nykIyTB3MnCEhILg44Ug9ILC3vG/qnHnv3zRtIu4bXNOhDQN5shfnchgGPJFf8PA==
   dependencies:
     "@nuxt/kit" "^3.0.0"
-    "@vueuse/core" "9.11.0"
-    "@vueuse/metadata" "9.11.0"
+    "@vueuse/core" "9.11.1"
+    "@vueuse/metadata" "9.11.1"
     local-pkg "^0.4.2"
     vue-demi "*"
 
@@ -2595,6 +2610,13 @@
   version "9.11.0"
   resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-9.11.0.tgz#8cf7c64789040e90d0cb5c8ac73cc9d252f7306c"
   integrity sha512-8lO7wD5abYxupKy2KynH1pSgP715ky6iCrWYb8aX2AuAVi9uHXj7qE1dw6BnmArSaLHci4x9iuzWPCpAzUkC/A==
+  dependencies:
+    vue-demi "*"
+
+"@vueuse/shared@9.11.1":
+  version "9.11.1"
+  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-9.11.1.tgz#c76805c9d86da109b132529b4745d7d706106e7f"
+  integrity sha512-UTZYGAjT96hWn4buf4wstZbeheBVNcKPQuej6qpoSkjF1atdaeCD6kqm9uGL2waHfisSgH9mq0qCRiBOk5C/2w==
   dependencies:
     vue-demi "*"
 
@@ -6426,6 +6448,16 @@ nuxt-icon@^0.2.5:
     "@nuxt/kit" "^3.0.0"
     nuxt-config-schema "^0.4.2"
 
+nuxt-plausible@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/nuxt-plausible/-/nuxt-plausible-0.1.2.tgz#cccf061d267bb2453caf5c410eb7de7fd556381d"
+  integrity sha512-w3Flmonlb73L/IpPkkNfSuUgahXtmp/xyp33MWdqaxMUgwRAdXNZy+YNJyFUPZObp/yruZquisoMy0WLKfcCJQ==
+  dependencies:
+    "@nuxt/kit" "^3.0.0"
+    defu "^6.1.1"
+    pathe "^1.0.0"
+    plausible-tracker "^0.3.8"
+
 nuxt@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.0.0.tgz#0909e6566d79805f3a4ed6229573817cbde12e89"
@@ -6806,6 +6838,11 @@ pkg-types@^1.0.0, pkg-types@^1.0.1:
     jsonc-parser "^3.2.0"
     mlly "^1.0.0"
     pathe "^1.0.0"
+
+plausible-tracker@^0.3.8:
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/plausible-tracker/-/plausible-tracker-0.3.8.tgz#9b8b322cc41e0e1d6473869ef234deea365a5a40"
+  integrity sha512-lmOWYQ7s9KOUJ1R+YTOR3HrjdbxIS2Z4de0P/Jx2dQPteznJl2eX3tXxKClpvbfyGP59B5bbhW8ftN59HbbFSg==
 
 portfinder@^1.0.26:
   version "1.0.32"

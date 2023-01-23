@@ -47,7 +47,7 @@ const contents = ref([
 
 <template>
   <div
-    class="p-5 grid grid-cols-2 gap-5 bg-white dark:bg-black dark:border-gray-700 rounded"
+    class="md:p-5 grid grid-cols-1 md:grid-cols-2 gap-5 bg-white dark:bg-black dark:border-gray-700 rounded"
   >
     <NuxtLink
       v-for="(content, index) in contents"
@@ -55,7 +55,7 @@ const contents = ref([
       class="block max-w-sm p-5 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
     >
       <h5
-        class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        class="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
       >
         {{ content.title }}
       </h5>
