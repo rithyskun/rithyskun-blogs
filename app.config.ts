@@ -1,8 +1,8 @@
 // app.config.ts
 export default defineAppConfig({
   docus: {
-    title: "Rithy's blogs",
-    description: "The best place to start your documentation.",
+    title: "Rithy's blog",
+    description: "I love to explore the new tech",
     socials: {
       twitter: "rithyskun",
       github: "rithyskun",
@@ -11,7 +11,7 @@ export default defineAppConfig({
       fluid: true,
     },
     header: {
-      title: 'Rithy SKUN',
+      title: 'RS',
       logo: false,
       showLinkIcon: true,
       exclude: []
@@ -22,15 +22,10 @@ export default defineAppConfig({
       exclude: [],
     },
     footer: {
-      credits: {
-        icon: 'IconDocus',
-        text: 'Powered by Docus',
-        href: 'https://docus.dev',
-      },
       iconLinks: [
         {
           href: "https://rithyskun-blogs.netlify.app/",
-          icon: "logos:nuxt-icon",
+          icon: "cafe",
         },
       ],
     },
