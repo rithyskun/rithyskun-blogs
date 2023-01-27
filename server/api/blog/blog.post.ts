@@ -1,6 +1,5 @@
 import fs from 'fs'
 import Mustache from 'mustache'
-import {marked} from 'marked';
 import { createBlog } from '~~/modules/blog/blog.service'
 
 export default defineEventHandler(async (event) => {

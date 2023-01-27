@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { PropType } from "vue";
-import { marked } from "marked";
 import { Todo } from "~/types/todo.type";
 import { useTodoStore } from "~/stores/todo";
 import { useFocus } from "@vueuse/core";
@@ -79,7 +78,7 @@ const markCompleted = async (list: Todo) => {
             class="ml-5 py-2 flex items-center text-start"
             @dblclick="editTodo(list)"
             v-if="!isEdit"
-            v-html="marked(list.todo)"></div
+            v-html="list.todo"></div
           >
           <input
             ref="input"
