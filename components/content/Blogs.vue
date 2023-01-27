@@ -9,52 +9,52 @@ export interface IContent {
   isActive: boolean
 }
 
-// const contents = ref([
-//   {
-//     id: 1,
-//     title: '1 content',
-//     description:
-//       'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-//     isActive: true
-//   },
-//   {
-//     id: 2,
-//     title: '2 content',
-//     description:
-//       'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-//     isActive: true
-//   },
-//   {
-//     id: 3,
-//     title: '3 content',
-//     description:
-//       'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-//     isActive: true
-//   },
-//   {
-//     id: 4,
-//     title: '4 content',
-//     description:
-//       'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-//     isActive: true
-//   },
-//   {
-//     id: 5,
-//     title: '5 content',
-//     description:
-//       'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-//     isActive: true
-//   },
-//   {
-//     id: 6,
-//     title: '6 content',
-//     description:
-//       'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-//     isActive: true
-//   }
-// ])
+const contents = ref([
+  {
+    id: 1,
+    title: '1 content',
+    description:
+      'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
+    isActive: true
+  },
+  {
+    id: 2,
+    title: '2 content',
+    description:
+      'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
+    isActive: true
+  },
+  {
+    id: 3,
+    title: '3 content',
+    description:
+      'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
+    isActive: true
+  },
+  {
+    id: 4,
+    title: '4 content',
+    description:
+      'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
+    isActive: true
+  },
+  {
+    id: 5,
+    title: '5 content',
+    description:
+      'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
+    isActive: true
+  },
+  {
+    id: 6,
+    title: '6 content',
+    description:
+      'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
+    isActive: true
+  }
+])
 
-const { data: contents } = await useFetch('/api/blog/blog')
+// const { data: contents } = await useFetch('/api/blog/blog')
 
 const handleContent = (content: IContent) => {
   console.log(content)
@@ -136,9 +136,6 @@ const handleCreateBlog = async () => {
         class="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
       >
         {{ content.title }}
-        <span class="py-0.5 px-1 font-sans text-xs flex">
-          {{  content.tags }}
-        </span>
       </h5>
       <p class="font-normal text-gray-700 dark:text-gray-400">
         {{ content.description }}

@@ -33,9 +33,9 @@ export default defineNuxtConfig({
     shim: false,
     strict: true,
   },
-  nitro: {
-    plugins: ["~/server/index.ts"]
-  },
+  // nitro: {
+  //   plugins: ["~/server/index.ts"]
+  // },
   runtimeConfig: {
     mongodbUri: process.env.MONGODB_URI,
     plausible: process.env.NUXT_PUBLIC_PLAUSIBLE_DOMAIN

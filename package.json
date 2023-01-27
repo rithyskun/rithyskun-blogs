@@ -24,7 +24,6 @@
     "chart.js": "^4.1.2",
     "md-editor-v3": "^2.7.2",
     "mongodb": "^4.13.0",
-    "mongoose": "^6.8.4",
     "nuxt-icon": "^0.1.8",
     "vue-chartjs": "^5.1.0"
   }
