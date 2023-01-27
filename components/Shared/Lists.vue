@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { PropType } from "vue";
+import { marked } from "marked";
 import { Todo } from "~/types/todo.type";
 import { useTodoStore } from "~/stores/todo";
 import { useFocus } from "@vueuse/core";
@@ -74,11 +75,11 @@ const markCompleted = async (list: Todo) => {
             @change="markCompleted(list)"
             class="h-5 w-5 hover:cursor-pointer rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
           />
-          <label
+          <div
             class="ml-5 py-2 flex items-center text-start"
             @dblclick="editTodo(list)"
             v-if="!isEdit"
-            >{{ list.todo }}</label
+            v-html="marked(list.todo)"></div
           >
           <input
             ref="input"

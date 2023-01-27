@@ -19,5 +19,6 @@ export default <Config>{
     },
   },
   darkMode: "class",
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [require("@tailwindcss/forms")
+  ],
 };

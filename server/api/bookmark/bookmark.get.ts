@@ -1,4 +1,4 @@
-import { findAllBookmark } from "~/modules/bookmarks/bookmark.service";
+import { findAllBookmark } from "~~/modules/bookmarks/bookmark.service";
 
 export default defineEventHandler(async (event) => {
     try {
