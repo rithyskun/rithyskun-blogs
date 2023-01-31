@@ -12,42 +12,42 @@ export interface IContent {
 const contents = ref([
   {
     id: 1,
-    title: '1 content',
+    title: 'Interview with News company',
     description:
       'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
     isActive: true
   },
   {
     id: 2,
-    title: '2 content',
+    title: 'Interviw with UK ISP company',
     description:
       'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
     isActive: true
   },
   {
     id: 3,
-    title: '3 content',
+    title: 'Interview with Bank',
     description:
       'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
     isActive: true
   },
   {
     id: 4,
-    title: '4 content',
+    title: 'Interview with ISP',
     description:
       'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
     isActive: true
   },
   {
     id: 5,
-    title: '5 content',
+    title: 'Interview with IT consultant company',
     description:
       'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
     isActive: true
   },
   {
     id: 6,
-    title: '6 content',
+    title: 'Interview with leading cambodian IT companies',
     description:
       'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
     isActive: true
@@ -124,7 +124,7 @@ const handleCreateBlog = async () => {
     </SharedModal>
   </div>
   <div
-    class="md:p-5 grid grid-cols-1 md:grid-cols-2 gap-5 bg-white dark:bg-black dark:border-gray-700 rounded"
+    class="md:p-5 mt-5 grid grid-cols-1 md:grid-cols-2 gap-5 bg-white dark:bg-black dark:border-gray-700 rounded"
   >
     <NuxtLink
       v-for="(content, index) in contents"
