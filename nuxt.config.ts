@@ -34,11 +34,12 @@ export default defineNuxtConfig({
     strict: true,
   },
   // nitro: {
-  //   plugins: ["~/server/index.ts"]
+  //   plugins: ["~/plugins/vue-gtag.client.js"]
   // },
   runtimeConfig: {
     mongodbUri: process.env.MONGODB_URI,
-    plausible: process.env.NUXT_PUBLIC_PLAUSIBLE_DOMAIN
+    plausible: process.env.NUXT_PUBLIC_PLAUSIBLE_DOMAIN,
+    GA: process.env.GOOGLE_ANALYTICS_ID
   },
   
 });
