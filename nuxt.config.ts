@@ -40,4 +40,5 @@ export default defineNuxtConfig({
     mongodbUri: process.env.MONGODB_URI,
     plausible: process.env.NUXT_PUBLIC_PLAUSIBLE_DOMAIN
   },
+  
 });
