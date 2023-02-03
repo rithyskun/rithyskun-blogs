@@ -7,9 +7,7 @@ export default defineAppConfig({
       twitter: "rithyskun",
       github: "rithyskun",
     },
-    layout: {
-      fluid: true,
-    },
+    layout: "default",
     header: {
       title: 'RS',
       logo: false,

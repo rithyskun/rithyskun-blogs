@@ -15,16 +15,16 @@ useHead({
     }
   ],
   bodyAttrs: {
-    class: 'test'
+    class: ''
   },
   script: [
     { children: "console.log('Welcome to my blog')" },
     {
-      src: 'https://www.googletagmanager.com/gtag/js?id=G-QMH8HL61E4',
+      src: "https://www.googletagmanager.com/gtag/js?id=G-QMH8HL61E4",
       children: `window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', 'G-QMH8HL61E4');`
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-QMH8HL61E4');`
     },
     {
       src: 'https://plausible.io/js/script.js',

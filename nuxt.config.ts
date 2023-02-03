@@ -27,19 +27,18 @@ export default defineNuxtConfig({
       classSuffix: ""
     }],
     "@nuxtjs/plausible"
-  ],
+  ],  
   extends: "@nuxt-themes/docus",
   typescript: {
     shim: false,
     strict: true,
   },
   // nitro: {
-  //   plugins: ["~/plugins/vue-gtag.client.js"]
+  //   plugins: ["~/server/index.ts"]
   // },
   runtimeConfig: {
     mongodbUri: process.env.MONGODB_URI,
     plausible: process.env.NUXT_PUBLIC_PLAUSIBLE_DOMAIN,
     GA: process.env.GOOGLE_ANALYTICS_ID
   },
-  
 });
