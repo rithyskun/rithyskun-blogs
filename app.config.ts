@@ -7,12 +7,16 @@ export default defineAppConfig({
       twitter: "rithyskun",
       github: "rithyskun",
     },
-    layout: "default",
+    main: {
+      padded: true,
+      fluid: true
+    },
     header: {
       title: 'RS',
       logo: false,
       showLinkIcon: true,
-      exclude: []
+      exclude: [],
+      fluid: true
     },
     aside: {
       level: 1,
@@ -26,7 +30,17 @@ export default defineAppConfig({
           icon: "cafe",
         },
       ],
+      fluid: true
     },
+    prose: {
+      copyButton: {
+        iconCopy: "ph:copy",
+        iconCopied: "ph:check"
+      },
+      headings: {
+        icon: "ph:link"
+      }
+    }
   },
   nuxtIcon: {
     size: "24px", // default <Icon> size applied
