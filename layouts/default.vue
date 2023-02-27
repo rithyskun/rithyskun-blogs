@@ -19,6 +19,7 @@ useHead({
   },
   script: [
     { children: "console.log('Welcome to my blog')" },
+    { src: "https://www.googletagmanager.com/gtag/js?id=G-0RYW18N27X"},
     {
       src: 'https://plausible.io/js/script.js',
       defer: true,
