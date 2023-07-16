@@ -1,32 +1,30 @@
 <script setup lang="ts">
-import { minNav } from "~~/navigationList";
-import { onClickOutside, whenever, useMagicKeys } from "@vueuse/core";
+import { onClickOutside, useMagicKeys, whenever } from '@vueuse/core'
+import { minNav } from '~~/navigationList'
 
-const { t } = useI18n();
 defineProps<{
-  show: boolean;
-}>();
-
-const emit = defineEmits(["closeDrawer"]);
-
-const target = ref(null);
-const keys = useMagicKeys();
+  show: boolean
+}>()
+const emit = defineEmits(['closeDrawer'])
+const { t } = useI18n()
+const target = ref(null)
+const keys = useMagicKeys()
 whenever(keys.escape, () => {
-  emit("closeDrawer");
-});
+  emit('closeDrawer')
+})
 
 onClickOutside(target, () => {
-  emit("closeDrawer");
-});
+  emit('closeDrawer')
+})
 </script>
 
 <template>
   <!-- drawer component -->
   <div
     v-show="show"
-    ref="target"
     id="drawer-navigation"
-    class="fixed top-14 left-0 z-20 h-screen w-60 md:w-72 overflow-y-auto bg-gray-200 bg-white p-4 dark:bg-gray-800"
+    ref="target"
+    class="fixed top-14 left-0 z-20 h-screen w-60 md:w-72 overflow-y-auto bg-white p-4 dark:bg-gray-800"
     tabindex="-1"
     aria-labelledby="drawer-navigation-label"
   >
@@ -34,14 +32,14 @@ onClickOutside(target, () => {
       id="drawer-navigation-label"
       class="text-base font-semibold uppercase text-gray-500 dark:text-gray-400"
     >
-      {{ t("welcome") }}
+      {{ t('welcome') }}
     </h5>
     <button
-      @click="$emit('closeDrawer')"
       type="button"
       data-drawer-hide="drawer-navigation"
       aria-controls="drawer-navigation"
       class="absolute top-2.5 right-2.5 inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+      @click="$emit('closeDrawer')"
     >
       <Icon name="close" />
       <span class="sr-only">Close menu</span>

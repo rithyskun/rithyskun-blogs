@@ -1,5 +1,5 @@
 <template>
-    <div>
-        Payment
-    </div>
+  <div>
+    Payment
+  </div>
 </template>

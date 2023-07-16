@@ -15,86 +15,86 @@ const contents = ref([
     title: 'Interview with News company',
     description:
       'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-    isActive: true
+    isActive: true,
   },
   {
     id: 2,
     title: 'Interviw with UK ISP company',
     description:
       'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-    isActive: true
+    isActive: true,
   },
   {
     id: 3,
     title: 'Interview with Bank',
     description:
       'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-    isActive: true
+    isActive: true,
   },
   {
     id: 4,
     title: 'Interview with ISP',
     description:
       'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-    isActive: true
+    isActive: true,
   },
   {
     id: 5,
     title: 'Interview with IT consultant company',
     description:
       'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-    isActive: true
+    isActive: true,
   },
   {
     id: 6,
     title: 'Interview with leading cambodian IT companies',
     description:
       'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-    isActive: true
-  }
+    isActive: true,
+  },
 ])
 
 // const { data: contents } = await useFetch('/api/blog/blog')
 
-const handleContent = (content: IContent) => {
-  console.log(content)
+function handleContent(content: IContent) {
+  console.error(content)
 }
 
-const handleShowCreateModal = () => {
+function handleShowCreateModal() {
   show.value = true
 }
 
 const show = ref<boolean>(false)
 const blog = ref({
-  title: "",
-  coverImageUrl: "",
-  description: "",
+  title: '',
+  coverImageUrl: '',
+  description: '',
   tags: [],
-  blogBody: ""
+  blogBody: '',
 })
 
-const handleCreateBlog = async () => {
-
-  let bodyData = {
+async function handleCreateBlog() {
+  const bodyData = {
     title: blog.value.title,
-    coverImageUrl: "",
+    coverImageUrl: '',
     tags: blog.value.tags,
-    blogBody: blog.value.blogBody
+    blogBody: blog.value.blogBody,
   }
   const result = await useFetch('/api/blog/blog', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: bodyData
+    body: bodyData,
   })
   show.value = false
-  
 }
-
 </script>
 
 <template>
   <div>
-    <button @click="handleShowCreateModal" class="py-2.5 dark:text-white dark:bg-gray-800 rounded-xl font-bold px-3 bg-gray-200 hover:text-blue-500">
+    <button
+      class="py-2.5 dark:text-white dark:bg-gray-800 rounded-xl font-bold px-3 bg-gray-200 hover:text-blue-500"
+      @click="handleShowCreateModal"
+    >
       Create
     </button>
     <SharedModal v-show="show" @closeModal="show = false">
@@ -105,19 +105,26 @@ const handleCreateBlog = async () => {
       </template>
       <template #body>
         <ClientOnly>
-        <form @submit="handleCreateBlog" class="flex flex-col gap-5">
-          <!-- <input type="file"  placeholder="A a cover image"> -->
-          <input type="text" v-model="blog.title" placeholder="New blog title here...">
-          <input type="text" v-model="blog.description" placeholder="Description">
-          <input type="text" v-model="blog.tags" placeholder="Tags">
-          <md-editor v-model="blog.blogBody" language="en-US" />
-          
-        </form>
-      </ClientOnly>
+          <form class="flex flex-col gap-5" @submit="handleCreateBlog">
+            <!-- <input type="file"  placeholder="A a cover image"> -->
+            <input
+              v-model="blog.title"
+              type="text"
+              placeholder="New blog title here..."
+            >
+            <input
+              v-model="blog.description"
+              type="text"
+              placeholder="Description"
+            >
+            <input v-model="blog.tags" type="text" placeholder="Tags">
+            <MdEditor v-model="blog.blogBody" language="en-US" />
+          </form>
+        </ClientOnly>
       </template>
 
       <template #footer>
-        <button @click="handleCreateBlog" class="form-input">
+        <button class="form-input" @click="handleCreateBlog">
           Submit
         </button>
       </template>
@@ -129,8 +136,8 @@ const handleCreateBlog = async () => {
     <NuxtLink
       v-for="(content, index) in contents"
       :key="index"
-      @click="handleContent(content)"
       class="block max-w-sm p-5 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+      @click="handleContent(content)"
     >
       <h5
         class="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white"

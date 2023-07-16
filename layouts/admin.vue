@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useSidebarStore } from "../stores/sidebar";
+import { useSidebarStore } from '../stores/sidebar'
 
-const store = useSidebarStore();
+const store = useSidebarStore()
 </script>
 
 <template>

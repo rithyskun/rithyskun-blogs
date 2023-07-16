@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { todoApp, dashboardApp, posApp } from '~~/navigationList'
 import { useSidebarStore } from '../../stores/sidebar'
+import { dashboardApp, posApp, todoApp } from '~~/navigationList'
 
 const store = useSidebarStore()
 
@@ -23,6 +23,7 @@ const { t } = useI18n()
       <ul class="space-y-1 p-2">
         <NuxtLink
           v-for="nav in todoApp"
+          :key="nav.to"
           :to="nav.to"
           active-class="bg-blue-200 dark:bg-gray-500"
           class="flex items-center hover:bg-gray-200 rounded-lg p-2 text-base font-normal text-gray-900 dark:text-white dark:hover:bg-gray-700"
@@ -42,6 +43,7 @@ const { t } = useI18n()
       <ul class="space-y-1 p-2">
         <NuxtLink
           v-for="nav in dashboardApp"
+          :key="nav.to"
           :to="nav.to"
           active-class="bg-blue-200 dark:bg-gray-500"
           class="flex items-center hover:bg-gray-200 rounded-lg p-2 text-base font-normal text-gray-900 dark:text-white dark:hover:bg-gray-700"
@@ -61,6 +63,7 @@ const { t } = useI18n()
       <ul class="space-y-1 p-2">
         <NuxtLink
           v-for="nav in posApp"
+          :key="nav.to"
           :to="nav.to"
           active-class="bg-blue-200 dark:bg-gray-500"
           class="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"

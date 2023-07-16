@@ -2,8 +2,7 @@
 </script>
 
 <template>
-    <div>
-        Blog details
-    </div>
+  <div>
+    Blog details
+  </div>
 </template>
-

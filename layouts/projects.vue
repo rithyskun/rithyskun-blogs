@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useSidebarStore } from "~/stores/sidebar";
+import { useSidebarStore } from '~/stores/sidebar'
 
-const store = useSidebarStore();
+const store = useSidebarStore()
 </script>
 
 <template>
@@ -9,7 +9,7 @@ const store = useSidebarStore();
     <!-- <LayoutNavbar /> -->
     <LayoutSidebar />
     <div class="mx-5">
-      <div  :class="{ '!ml-[220px]': store.sidebar }">
+      <div :class="{ '!ml-[220px]': store.sidebar }">
         <Icon
           name="sidebar"
           size="20"

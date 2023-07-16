@@ -5,7 +5,7 @@ defineProps({
   },
   label: {
     type: String,
-    default: "",
+    default: '',
   },
   placeholder: {
     type: String,
@@ -23,37 +23,36 @@ defineProps({
   },
   autocomplete: {
     type: String,
-    default: "none",
+    default: 'none',
   },
   validation: {
     type: String,
   },
-});
+})
 
-const emit = defineEmits(["update:modelValue"]);
+const emit = defineEmits(['update:modelValue'])
 
-const updateValue = (e: Event) => {
-  let target = (e.target as HTMLInputElement).value;
-  emit("update:modelValue", target);
-};
+function updateValue(e: Event) {
+  const target = (e.target as HTMLInputElement).value
+  emit('update:modelValue', target)
+}
 </script>
 
 <template>
   <div class="block">
     <label
       class="-ml-10 text-xl text-gray-800 placeholder:text-gray-300 dark:text-white dark:placeholder:text-gray-500"
-      >{{ label }}</label
-    >
+    >{{ label }}</label>
     <input
+      :id="id"
       :autocomplete="autocomplete"
       :value="modelValue"
       :disabled="disabled"
       :type="type"
-      @input="updateValue"
-      :id="id"
       class="block h-12 w-72 border-r border-t border-b border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
       :placeholder="placeholder"
-    />
+      @input="updateValue"
+    >
     <p class="ml-2 text-sm text-red-600 dark:text-red-500">
       {{ validation }}
     </p>

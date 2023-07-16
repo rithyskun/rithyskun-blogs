@@ -11,8 +11,8 @@ export default defineNuxtConfig({
       {
         cssPath: '~/assets/css/tailwind.css',
         configPath: 'tailwind.config',
-        exposeConfig: true
-      }
+        exposeConfig: true,
+      },
     ],
     '@vueuse/nuxt',
     [
@@ -23,24 +23,23 @@ export default defineNuxtConfig({
           locale: 'en',
           messages: {
             en,
-            km
-          }
-        }
-      }
+            km,
+          },
+        },
+      },
     ],
     'nuxt-icon',
     [
       '@nuxtjs/color-mode',
       {
-        classSuffix: ''
-      }
+        classSuffix: '',
+      },
     ],
-    '@nuxtjs/plausible'
   ],
   extends: '@nuxt-themes/docus',
   typescript: {
     shim: false,
-    strict: true
+    strict: true,
   },
   // nitro: {
   //   plugins: ["~/server/index.ts"]
@@ -48,6 +47,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     mongodbUri: process.env.MONGODB_URI,
     plausible: process.env.NUXT_PUBLIC_PLAUSIBLE_DOMAIN,
-    GA: process.env.GOOGLE_ANALYTICS_ID
-  }
+    GA: process.env.GOOGLE_ANALYTICS_ID,
+  },
 })

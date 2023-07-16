@@ -1,57 +1,56 @@
 <script setup lang="ts">
-import { Todo } from "~~/types/todo.type";
-import { useTodoStore } from "~~/stores/todo";
+import { useTodoStore } from '~~/stores/todo'
 
 definePageMeta({
-  layout: "projects",
-});
+  layout: 'projects',
+})
 
-const { t } = useI18n();
+const { t } = useI18n()
 
-const store = useTodoStore();
-const msg = ref<string>("");
-const keyword = ref<string>("");
+const store = useTodoStore()
+const msg = ref<string>('')
+const keyword = ref<string>('')
 
 watch(msg, () => {
   setTimeout(() => {
-    msg.value = "";
-  }, 1000);
-});
+    msg.value = ''
+  }, 1000)
+})
 
-const submit = () => {
-  if (!keyword.value) {
-    return (msg.value = "The field is required!");
-  }
-  let now = new Date();
-  now.toISOString().substring(0, 10);
+function submit() {
+  if (!keyword.value)
+    return (msg.value = 'The field is required!')
+
+  const now = new Date()
+  now.toISOString().substring(0, 10)
   const todo = {
     todo: keyword.value,
     isCompleted: false,
     createdAt: now,
-  };
-  store.createdTodo(todo);
-  keyword.value = "";
-};
+  }
+  store.createdTodo(todo)
+  keyword.value = ''
+}
 
 const todos = computed(() => {
-  return store.todos;
-});
-
+  return store.todos
+})
 
 const filterTodo = computed(() => {
-  if (!keyword.value) return todos.value;
+  if (!keyword.value)
+    return todos.value
   return todos.value.filter((item) => {
-    return item.todo.toLowerCase().indexOf(keyword.value.toLowerCase()) > -1;
-  });
-});
+    return item.todo.toLowerCase().includes(keyword.value.toLowerCase())
+  })
+})
 
-const markAllCompleted = () => {
-  console.log("mark all");
-};
+function markAllCompleted() {
+  console.log('mark all')
+}
 
 onMounted(() => {
-  store.getTodos();
-});
+  store.getTodos()
+})
 </script>
 
 <template>
@@ -68,26 +67,27 @@ onMounted(() => {
         </button>
         <div class="relative w-full">
           <SharedInput
+            v-model="keyword"
             :label="t('what_needs_to_be_done')"
             :placeholder="t('add_search_todo')"
-            v-model="keyword"
             type="text"
             :validation="msg"
           />
         </div>
       </div>
     </form>
-    <div v-if="!todos.length" class="animate-pulse text-sm">Loading...</div>
+    <div v-if="!todos.length" class="animate-pulse text-sm">
+      Loading...
+    </div>
     <div v-else-if="!filterTodo.length" class="mx-2 text-sm text-gray-500">
       No data, Create one instead!
     </div>
-    <SharedLists :todoData="filterTodo" v-else />
+    <SharedLists v-else :todo-data="filterTodo" />
     <p class="text-xs items-center justify-end hover:text-blue-500">
       <NuxtLink to="https://github.com/rithyskun/TODO-APP-with-NextJS">
         with <strong> NextJS</strong>
         <Icon name="github" />
       </NuxtLink>
     </p>
-    
   </div>
 </template>

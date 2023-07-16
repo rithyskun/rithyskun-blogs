@@ -1,5 +1,5 @@
 <template>
-    <div>
-        POS Sale
-    </div>
+  <div>
+    POS Sale
+  </div>
 </template>

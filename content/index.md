@@ -11,7 +11,7 @@ cta:
   - About me
   - /profile/now
 secondary:
-  - Checkout vPOS →
+  - Checkout the vPOS App →
   - https://vposapp-staging.netlify.app
 snippet: https://vposapp-staging.netlify.app
 ---

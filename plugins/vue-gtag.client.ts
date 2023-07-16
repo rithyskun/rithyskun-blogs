@@ -1,11 +1,11 @@
-import VueGtag, {trackRouter } from 'vue-gtag-next'
+import VueGtag, { trackRouter } from 'vue-gtag-next'
 
 export default defineNuxtPlugin((nuxtApp) => {
-    const config = useRuntimeConfig()
-    nuxtApp.vueApp.use(VueGtag, {
-        property: {
-            id: config.GA
-        }
-    })
-    trackRouter(useRouter())
+  const config = useRuntimeConfig()
+  nuxtApp.vueApp.use(VueGtag, {
+    property: {
+      id: config.GA,
+    },
+  })
+  trackRouter(useRouter())
 })

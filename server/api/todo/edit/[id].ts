@@ -1,39 +1,41 @@
-import clientPromise from "~/lib/mongodb";
-import { ObjectId } from "mongodb";
+import { ObjectId } from 'mongodb'
+import clientPromise from '~/lib/mongodb'
 
 export default defineEventHandler(async (event) => {
-  const client = await clientPromise;
-  const db = client.db("todos");
+  const client = await clientPromise
+  const db = client.db('todos')
 
-  const body = await readBody(event);
-  const id = event.context.params.id;
+  const body = await readBody(event)
+  const id = event.context.params.id
 
-  if (event.node.req.method === "PUT") {
+  if (event.node.req.method === 'PUT') {
     try {
-      const result = await db.collection("todos").updateOne(
+      const result = await db.collection('todos').updateOne(
         {
           _id: new ObjectId(id),
         },
         {
           $set: body,
-        }
-      );
-      return result;
-    } catch (error: any) {
-      console.error(error);
-      throw new error(error).message;
+        },
+      )
+      return result
+    }
+    catch (error: any) {
+      console.error(error)
+      throw new error(error).message
     }
   }
 
-  if (event.node.req.method === "DELETE") {
+  if (event.node.req.method === 'DELETE') {
     try {
-      await db.collection("todos").deleteOne({
+      await db.collection('todos').deleteOne({
         _id: new ObjectId(id),
-      });
-      return "success";
-    } catch (error: any) {
-      console.error(error);
-      throw new error(error).message;
+      })
+      return 'success'
+    }
+    catch (error: any) {
+      console.error(error)
+      throw new error(error).message
     }
   }
-});
+})

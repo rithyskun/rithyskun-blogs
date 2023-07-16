@@ -1,97 +1,98 @@
 <script setup lang="ts">
-import { Bar } from "vue-chartjs";
+import { Bar } from 'vue-chartjs'
 import {
-  Chart as ChartJS,
-  Title,
-  Tooltip,
-  Legend,
   BarElement,
   CategoryScale,
+  Chart as ChartJS,
+  Legend,
   LinearScale,
-} from "chart.js";
+  Title,
+  Tooltip,
+} from 'chart.js'
+
 ChartJS.register(
   Title,
   Tooltip,
   Legend,
   BarElement,
   CategoryScale,
-  LinearScale
-);
+  LinearScale,
+)
 
 definePageMeta({
-  layout: "projects",
-});
+  layout: 'projects',
+})
 
 const chartData = {
-  labels: ["Ambient", "Fresh", "Frozen", "Fruit & veg", "Other"],
+  labels: ['Ambient', 'Fresh', 'Frozen', 'Fruit & veg', 'Other'],
   datasets: [
     {
       data: [40, 20, 12, 25, 30],
       fill: false,
-      label: "Total sales by category",
-      backgroundColor: "#40f2dd",
-      borderColor: "#ed64a6",
+      label: 'Total sales by category',
+      backgroundColor: '#40f2dd',
+      borderColor: '#ed64a6',
       barThickness: 44,
     },
   ],
-};
+}
 
 const chartOptions = {
   responsive: true,
-};
+}
 
 const saleItems = [
   {
     id: 1,
-    name: "Product-1",
-    ambient: "9",
-    fresh: "1",
-    frozen: "343",
-    fruit: "125",
-    sale_total: "2323",
-    sale_margin: "34834",
+    name: 'Product-1',
+    ambient: '9',
+    fresh: '1',
+    frozen: '343',
+    fruit: '125',
+    sale_total: '2323',
+    sale_margin: '34834',
   },
   {
     id: 2,
-    name: "Product-2",
-    ambient: "9",
-    fresh: "2",
-    frozen: "343",
-    fruit: "125",
-    sale_total: "2323",
-    sale_margin: "34834",
+    name: 'Product-2',
+    ambient: '9',
+    fresh: '2',
+    frozen: '343',
+    fruit: '125',
+    sale_total: '2323',
+    sale_margin: '34834',
   },
   {
     id: 3,
-    name: "Product-3",
-    ambient: "9",
-    fresh: "3",
-    frozen: "343",
-    fruit: "125",
-    sale_total: "2323",
-    sale_margin: "34834",
+    name: 'Product-3',
+    ambient: '9',
+    fresh: '3',
+    frozen: '343',
+    fruit: '125',
+    sale_total: '2323',
+    sale_margin: '34834',
   },
   {
     id: 4,
-    name: "Product-4",
-    ambient: "5",
-    fresh: "4",
-    frozen: "343",
-    fruit: "125",
-    sale_total: "2323",
-    sale_margin: "34834",
+    name: 'Product-4',
+    ambient: '5',
+    fresh: '4',
+    frozen: '343',
+    fruit: '125',
+    sale_total: '2323',
+    sale_margin: '34834',
   },
   {
     id: 5,
-    name: "Product-5",
-    ambient: "20",
-    fresh: "5",
-    frozen: "343",
-    fruit: "125",
-    sale_total: "2323",
-    sale_margin: "34834",
+    name: 'Product-5',
+    ambient: '20',
+    fresh: '5',
+    frozen: '343',
+    fruit: '125',
+    sale_total: '2323',
+    sale_margin: '34834',
   },
-];
+]
 </script>
 
 <template>
@@ -108,38 +109,30 @@ const saleItems = [
             class="flex w-full flex-col items-center text-center justify-center rounded-xl bg-gray-400"
           >
             Total sales this month
-            <span class="items-center text-[#40f2dd] text-xl py-2 font-bold"
-              >120</span
-            >
+            <span class="items-center text-[#40f2dd] text-xl py-2 font-bold">120</span>
           </div>
           <div
             class="flex w-full flex-col items-center justify-center text-center rounded-xl bg-gray-300"
           >
             Best selling category ever
-            <span class="items-center text-xl py-2 font-bold text-gray-900"
-              >Fresh</span
-            >
+            <span class="items-center text-xl py-2 font-bold text-gray-900">Fresh</span>
           </div>
           <div
             class="flex w-full bg-[#40f2dd] text-gray-900 text-center dark:bg-[#40f2dd] flex-col items-center justify-center rounded-xl"
           >
             Most sales this month
-            <span class="items-center text-xl py-2 font-bold text-white"
-              >Name One</span
-            >
+            <span class="items-center text-xl py-2 font-bold text-white">Name One</span>
           </div>
         </div>
       </div>
-      <div></div>
+      <div />
       <div class="h-32 rounded-xl flex">
         <div class="flex w-full gap-2">
           <div
             class="flex flex-col text-gray-900 text-center items-center justify-center w-full rounded-xl bg-gray-300"
           >
             Best selling product ever
-            <span class="items-center text-xl py-2 font-bold text-white"
-              >Yorkshie pudds</span
-            >
+            <span class="items-center text-xl py-2 font-bold text-white">Yorkshie pudds</span>
           </div>
           <div
             class="flex w-full rounded-xl bg-gray-400 text-center flex-col items-center justify-center"
@@ -147,15 +140,12 @@ const saleItems = [
             Total margin this month
             <span
               class="items-center text-[#40f2dd] text-xl py-2 font-bold text-gray-900"
-              >£ 10,365.56</span
-            >
+            >£ 10,365.56</span>
           </div>
           <div
             class="flex w-4/6 truncate text-gray-900 items-center flex flex-col py-2 h-72 rounded-xl bg-gray-500"
           >
-            <span class="items-center flex justify-between"
-              >Monthly sales</span
-            >
+            <span class="items-center flex justify-between">Monthly sales</span>
             <div class="flex flex-row justify-between text-xs text-white">
               <span> Jan 23 </span>
               <span> £ 23.00</span>
@@ -292,18 +282,14 @@ const saleItems = [
             class="bg-gray-400 text-gray-900 rounded-xl flex flex-col items-center justify-center w-full h-full"
           >
             Most shipped
-            <span class="items-center text-xl py-2 font-bold text-[#40f2dd]"
-              >England</span
-            >
+            <span class="items-center text-xl py-2 font-bold text-[#40f2dd]">England</span>
           </div>
         </div>
         <div
           class="bg-gray-300 p-2 text-gray-900 text-xl rounded-xl flex flex-col items-center justify-center"
         >
           Total sales
-          <span class="items-center text-2xl py-2 font-bold text-[#40f2dd]"
-            >1503</span
-          >
+          <span class="items-center text-2xl py-2 font-bold text-[#40f2dd]">1503</span>
         </div>
       </div>
     </div>

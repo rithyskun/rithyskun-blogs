@@ -1,6 +1,14 @@
 {
-    "tailwindCSS.experimental.configFile": ".nuxt/tailwind.config.cjs",
-    "files.associations": {
-        "*.css": "tailwindcss"
-    }
+  "tailwindCSS.experimental.configFile": ".nuxt/tailwind.config.cjs",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "prettier.enable": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "i18n-ally.localesPaths": [
+    "locale"
+  ]
 }

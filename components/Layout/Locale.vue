@@ -16,10 +16,14 @@ watch(locale, (cv) => {
 
 <template>
   <select
-    class="flex bg-white hover:bg-gray-300 rounded-full border-none form-select hover:cursor-pointer text-sm focus:outline-none focus:ring-1 focus:ring-gray-200 dark:bg-gray-900 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
     v-model="locale"
+    class="flex bg-white hover:bg-gray-300 rounded-full border-none form-select hover:cursor-pointer text-sm focus:outline-none focus:ring-1 focus:ring-gray-200 dark:bg-gray-900 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
   >
-    <option value="en">EN</option>
-    <option value="km">ខ្មែរ</option>
+    <option value="en">
+      EN
+    </option>
+    <option value="km">
+      ខ្មែរ
+    </option>
   </select>
 </template>

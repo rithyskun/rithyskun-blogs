@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const { page } = useContent();
-const route = useRoute();
+const { page } = useContent()
+const route = useRoute()
 const parentPath = computed(() => {
-  const pathTabl = route.path.split("/");
-  pathTabl.pop();
-  return pathTabl.join("/");
-});
+  const pathTabl = route.path.split('/')
+  pathTabl.pop()
+  return pathTabl.join('/')
+})
 </script>
 
 <template>

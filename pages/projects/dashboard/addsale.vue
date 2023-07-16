@@ -1,78 +1,78 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: "projects",
-});
+  layout: 'projects',
+})
 
 const category = [
-  { id: 1, name: "Category-1" },
-  { id: 2, name: "Category-2" },
-  { id: 3, name: "Category-3" },
-  { id: 4, name: "Category-4" },
-  { id: 5, name: "Category-5" },
-];
+  { id: 1, name: 'Category-1' },
+  { id: 2, name: 'Category-2' },
+  { id: 3, name: 'Category-3' },
+  { id: 4, name: 'Category-4' },
+  { id: 5, name: 'Category-5' },
+]
 const products = [
-  { id: 1, name: "Product-1" },
-  { id: 2, name: "Product-2" },
-  { id: 3, name: "Product-3" },
-  { id: 4, name: "Product-4" },
-  { id: 5, name: "Product-5" },
-];
+  { id: 1, name: 'Product-1' },
+  { id: 2, name: 'Product-2' },
+  { id: 3, name: 'Product-3' },
+  { id: 4, name: 'Product-4' },
+  { id: 5, name: 'Product-5' },
+]
 const persons = [
-  { id: 1, name: "Name-1" },
-  { id: 2, name: "Name-2" },
-  { id: 3, name: "Name-3" },
-  { id: 4, name: "Name-4" },
-  { id: 5, name: "Name-5" },
-];
+  { id: 1, name: 'Name-1' },
+  { id: 2, name: 'Name-2' },
+  { id: 3, name: 'Name-3' },
+  { id: 4, name: 'Name-4' },
+  { id: 5, name: 'Name-5' },
+]
 
 const address = [
-  { id: 1, name: "Cambodia-1" },
-  { id: 2, name: "Cambodia-2" },
-  { id: 3, name: "Cambodia-3" },
-  { id: 4, name: "Cambodia-4" },
-  { id: 5, name: "Cambodia-5" },
-];
+  { id: 1, name: 'Cambodia-1' },
+  { id: 2, name: 'Cambodia-2' },
+  { id: 3, name: 'Cambodia-3' },
+  { id: 4, name: 'Cambodia-4' },
+  { id: 5, name: 'Cambodia-5' },
+]
 
 const saleItems = [
   {
     id: 1,
-    productName: "Product-1",
-    price: "9.50",
-    productCategory: "Category-1",
+    productName: 'Product-1',
+    price: '9.50',
+    productCategory: 'Category-1',
     quantity: 3,
   },
   {
     id: 2,
-    productName: "Product-2",
-    price: "15.00",
-    productCategory: "Category-2",
+    productName: 'Product-2',
+    price: '15.00',
+    productCategory: 'Category-2',
     quantity: 3,
   },
   {
     id: 3,
-    productName: "Product-3",
-    price: "10.50",
-    productCategory: "Categort-3",
+    productName: 'Product-3',
+    price: '10.50',
+    productCategory: 'Categort-3',
     quantity: 5,
   },
   {
     id: 4,
-    productName: "Product-4",
-    price: "15.50",
-    productCategory: "Category-4",
+    productName: 'Product-4',
+    price: '15.50',
+    productCategory: 'Category-4',
     quantity: 2,
   },
   {
     id: 5,
-    productName: "Product-5",
-    price: "25.50",
-    productCategory: "Category-5",
+    productName: 'Product-5',
+    price: '25.50',
+    productCategory: 'Category-5',
     quantity: 1,
   },
-];
+]
 
-const salePrice = ref<number>(13.5);
-const quantify = ref<number>(1);
+const salePrice = ref<number>(13.5)
+const quantify = ref<number>(1)
 </script>
 
 <template>
@@ -99,14 +99,14 @@ const quantify = ref<number>(1);
           <SharedBaseInput
             label="Price"
             type="number"
-            :modelValue="salePrice"
+            :model-value="salePrice"
           />
         </div>
         <div class="w-full">
           <SharedBaseInput
             label="Quantity"
             type="number"
-            :modelValue="quantify"
+            :model-value="quantify"
           />
         </div>
         <div class="w-full flex justify-start items-end">
@@ -162,10 +162,12 @@ const quantify = ref<number>(1);
         </li>
       </ul>
       <div class="flex grid-cols-1 p-2 mt-2 items-center justify-between">
-        <div class="font-bold text-xl text-white">Total: £ 76.00</div>
+        <div class="font-bold text-xl text-white">
+          Total: £ 76.00
+        </div>
         <div class="space-x-2 flex">
-          <SharedButton label="Cancel" class="bg-white hover:text-white dark:bg-white text-gray-800"/>
-          <SharedButton label="Save" class="bg-gray-600"/>
+          <SharedButton label="Cancel" class="bg-white hover:text-white dark:bg-white text-gray-800" />
+          <SharedButton label="Save" class="bg-gray-600" />
         </div>
       </div>
     </div>
