@@ -2,5 +2,8 @@
     "tailwindCSS.experimental.configFile": ".nuxt/tailwind.config.cjs",
     "files.associations": {
         "*.css": "tailwindcss"
-    }
+    },
+    "i18n-ally.localesPaths": [
+        "locale"
+    ]
 }
