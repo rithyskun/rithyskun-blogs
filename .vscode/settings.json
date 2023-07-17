@@ -3,12 +3,5 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "prettier.enable": true,
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "i18n-ally.localesPaths": [
-    "locale"
-  ]
+  "i18n-ally.localesPaths": ["locale"]
 }
